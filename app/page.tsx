@@ -16,7 +16,7 @@ export default function Home() {
     />
     <div className='flex flex-col justify-center inset-0 z-100 items-center absolute h-full text-3xl space-y-4'>
     <div className="text-white bg-black text-3xl">Welcome to the Ultimate E-commerce experience!</div>
-     <Button asChild><Link href='/'>Continue</Link></Button>
+     <Button asChild><Link href='/Cars'>Continue</Link></Button>
     </div>
     </div>
     </>
