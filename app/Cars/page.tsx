@@ -1,4 +1,7 @@
+'use client'
 import React from 'react'
+import CardofCar from '@/components/CardofCar'
+import { useState } from 'react'
 
 
 interface Car {
@@ -36,10 +39,13 @@ interface Car {
     year: 2013
   }
   ]
-function handleCar (){
-document.body.innerHTML = 'weed'
-}
+
   export default function page() {
+const [showcards, setShowCards] = useState(false)
+const handleCar = ()=>{
+setShowCards(true)
+}
+
   return (
     <>
     <div onClick={handleCar} className='flex flex-wrap justify-center items-start gap-4 p-4'>
@@ -47,6 +53,7 @@ document.body.innerHTML = 'weed'
     <h1>Car info</h1>
     <p>{car.brand}</p>
     <p>{car.year}</p>
+    {showcards && <CardofCar brand={car.brand} year={car.year}  />}
     </div>
       ))}
 </div> 
